@@ -66,4 +66,3 @@ for cliente, mensaje in resultado["resumen_clientes"].items():
 
 if __name__ == "__main__":
     pass
-#riejfodcowosoisidncko
