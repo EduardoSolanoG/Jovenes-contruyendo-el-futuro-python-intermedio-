@@ -2,12 +2,12 @@ from collections import Counter, OrderedDict
 
 #datos
 compras = {
-    "luis", "Ana", "Luis",
-    "carlos", "Martha", "Ana",
-    "Sofia", "Elena", "Luis", "Carlos"
+    "compras": ["luis", "Ana",
+    "Luis", "carlos", "Martha", "Ana",
+    "Sofia", "Elena", "Luis", "Carlos",]
 }
 
-registro = {
+registros = {
     "registrados": ["Ana", "Carlos", "Martha", "Elena"]
 }
 
@@ -36,3 +36,33 @@ def crear_resumen(dic_frecuencias):
     }
     return {"resumen_clientes": resumen}
 
+#funcion principal que une todo
+def sistema_clientes(dic_compras, dic_registrados):
+    nuevos = filtrar_clientes_nuevos(dic_compras, dic_registrados)
+    unicos = eliminar_duplicados(dic_compras)
+    frecuencia = contar_compras(dic_compras)
+    resumen = crear_resumen(frecuencia)
+    return {
+        "clientes_nuevos": nuevos["clientes_nuevo"],
+        "clientes_unicos": unicos["clientes_unicos"],
+        "resumen_clientes": resumen["resumen_clientes"]
+    }
+
+#============================
+#Ejecucion directa
+#============================
+
+resultado = sistema_clientes(compras, registros)
+print("Clientes nuevos no registrados:")
+print(resultado["clientes_nuevos"])
+
+print("\n Lista de clientes unicos:")
+print(resultado["clientes_unicos"])
+
+print("\n Resumen por clientes frecuentes:")
+for cliente, mensaje in resultado["resumen_clientes"].items():
+    print(f"{cliente}: {mensaje}")
+
+
+if __name__ == "__main__":
+    pass
