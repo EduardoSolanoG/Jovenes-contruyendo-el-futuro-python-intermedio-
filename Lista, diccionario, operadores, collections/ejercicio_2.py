@@ -59,7 +59,7 @@ print(resultado["clientes_nuevos"])
 print("\n Lista de clientes unicos:")
 print(resultado["clientes_unicos"])
 
-print("\n Resumen por clientes frecuentes:")
+print(f"\n Resumen por clientes frecuentes:")
 for cliente, mensaje in resultado["resumen_clientes"].items():
     print(f"{cliente}: {mensaje}")
 
