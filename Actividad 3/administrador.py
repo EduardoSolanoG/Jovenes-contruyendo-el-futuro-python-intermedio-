@@ -6,5 +6,5 @@ from typing import List
 @dataclass
 class Administrador(Usuario):
 """
-
+Clase Administrador que hereda
 """
