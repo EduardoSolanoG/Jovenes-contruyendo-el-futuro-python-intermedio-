@@ -50,6 +50,6 @@ def to_dict(self) -> Dict:
     data.update({
         "telefono": self.telefono,
         "direccion": self.direccion,
-        "historial_compras": self.historial_compras
+        "historial_compras": self.historial_compras,
     })
     return data
