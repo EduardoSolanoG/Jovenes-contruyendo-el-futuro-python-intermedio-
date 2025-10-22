@@ -29,3 +29,27 @@ def mostrar_info(self) -> str:
 
 @registrar_accion("Cliente registrado en el sistema")
 def registrar(self) -> None:
+    """
+    Simula el registro del cliente en el sistema
+    En un caso real, podria guardarse en una base de datos o archivo JSON.
+    """
+    print(f"Cliente {self.nombre} registrado correctamente.")
+
+def agregar_comprar(self, compra: Dict) -> None:
+    """
+    Agrega una compra al historial del cliente.
+    Esto aplica composicion indirecta: el cliente guarda ventas realizadas.
+    """
+    self.historial_compras.append(compra)
+
+def to_dict(self) -> Dict:
+    """
+    Extiende el metodovde Usuariopara incluir datos especificos del cliente.
+    """
+    data = super().to_dict()
+    data.update({
+        "telefono": self.telefono,
+        "direccion": self.direccion,
+        "historial_compras": self.historial_compras
+    })
+    return data
