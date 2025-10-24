@@ -9,10 +9,11 @@ from cliente import Cliente
 class Tienda:
     """
     Clase Tienda que administra inventario y ventas.
-    Aplica Agregación: la tienda contiene ventas, pero estas existen independientemente.
+    Aplica Agregación: la tienda contiene ventas,
+    pero estas existen independientemente.
     """
     nombre: str
-    inventario: Dict[str, Producto] = field(default_factory=dict)   # Ej: {"Consola": Producto(...)}
+    inventario: Dict[str, Producto] = field(default_factory=dict)
     ventas_realizadas: List[Venta] = field(default_factory=list)
 
     @registrar_accion("Producto agregado al inventario")

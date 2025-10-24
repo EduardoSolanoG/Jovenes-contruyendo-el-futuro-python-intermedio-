@@ -30,7 +30,8 @@ class Usuario(ABC):
 
     def to_dict(self) -> Dict[str, str]:
         """
-        Metodo comun para serializar atributos esenciales (util para guardarlo en JSON).
+        Metodo comun para serializar atributos esenciales
+        (util para guardarlo en JSON).
         No rompe la abstraccion: devuelve solo los datos basicos.
         """
         return {"id": self.id, "nombre": self.nombre, "email": self.email}
@@ -38,7 +39,9 @@ class Usuario(ABC):
     #Metodo opcional que pueden reutilizar subclase (login simplificado)
     def auntentificar(self, token: str) -> bool:
         """
-        Metodo base de autentificacion simplificada. En produccion, se usaria hashing/DB.
-        Por defecto devuvelve True si token no vacio; las subclases pueden sobreescribir.
+        Metodo base de autentificacion simplificada.
+        En produccion, se usaria hashing/DB.
+        Por defecto devuvelve True si token no vacio;
+        las subclases pueden sobreescribir.
         """
         return bool(token and token.strip())
