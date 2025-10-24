@@ -21,7 +21,7 @@ class Tienda:
         Agrega o actualiza un producto en el inventario de la tienda.
         """
         self.inventario[producto.nombre] = producto
-        print(f"🛒 Producto '{producto.nombre}' disponible en tienda.")
+        print(f"Producto '{producto.nombre}' disponible en tienda.")
 
     def mostrar_inventario(self) -> None:
         """
@@ -31,7 +31,7 @@ class Tienda:
             print("No hay productos en el inventario.")
             return
 
-        print("\n📦 Inventario de la tienda:")
+        print("\nInventario de la tienda:")
         for producto in self.inventario.values():
             print(f" - {producto.nombre}: ${producto.precio:.2f} | Stock: {producto.stock}")
 
@@ -41,7 +41,7 @@ class Tienda:
         Agrega una venta al historial de la tienda.
         """
         self.ventas_realizadas.append(venta)
-        print(f"✅ Venta registrada. Cliente: {venta.cliente.nombre}")
+        print(f"Venta registrada. Cliente: {venta.cliente.nombre}")
 
     def ventas_totales(self) -> float:
         """
@@ -57,7 +57,7 @@ class Tienda:
             print("No se han realizado ventas aún.")
             return
 
-        print("\n🧾 Ventas realizadas:")
+        print("\nVentas realizadas:")
         for venta in self.ventas_realizadas:
             print(venta)
 

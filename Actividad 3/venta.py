@@ -43,7 +43,7 @@ class Venta:
             "total": total,
             "productos": [(item["producto"].nombre, item["cantidad"]) for item in self.productos]
         })
-        print(f"💰 Venta finalizada. Total: ${total:.2f}")
+        print(f"Venta finalizada. Total: ${total:.2f}")
 
     def __str__(self) -> str:
         productos_str = "\n".join(

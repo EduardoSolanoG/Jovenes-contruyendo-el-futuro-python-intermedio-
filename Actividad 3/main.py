@@ -11,7 +11,7 @@ def main():
     # 2. Crear administrador y autenticar
     admin = Administrador(nombre="Carlos", email="admin@techstore.com")
     if admin.autenticar("ADMIN123"):
-        print("🔐 Administrador autenticado correctamente.\n")
+        print("Administrador autenticado correctamente.\n")
 
     # 3. Crear productos y agregarlos al inventario
     productos = [
@@ -48,15 +48,15 @@ def main():
     print("\n=== INFORMACIÓN FINAL ===")
     print(f"Total recaudado por la tienda: ${tienda.ventas_totales():.2f}")
 
-    print("\n📈 Productos más vendidos:")
+    print("\n Productos más vendidos:")
     for nombre, cantidad in tienda.productos_mas_vendidos().items():
         print(f" - {nombre}: {cantidad} unidades")
 
-    print("\n🧾 Historial de compras del cliente:")
+    print("\n Historial de compras del cliente:")
     for compra in cliente1.historial_compras:
         print(compra)
 
-    print("\n🏁 Fin del programa")
+    print("\n Fin del programa")
 
 if __name__ == "__main__":
     main()
