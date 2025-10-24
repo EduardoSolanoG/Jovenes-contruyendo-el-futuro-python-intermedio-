@@ -1,8 +1,8 @@
-from dataclasses import daraclass, field
+from dataclasses import dataclass, field
 from decoradores import registrar_accion
 from typing import Dict
 
-@daraclass
+@dataclass
 class Producto:
     """
     Clase que representa un producto en la tienda.

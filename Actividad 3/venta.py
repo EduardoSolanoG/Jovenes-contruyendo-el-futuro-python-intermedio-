@@ -10,7 +10,7 @@ class Venta:
     Clase que representa una venta realizada por un cliente.
     Tiene composicion con producto
     """
-    cliente = Cliente
+    cliente: Cliente
     productos: List[Dict[str, any]] = field(default_factory=list)
 
     @registrar_accion("Se agrego un producto a una venta")
