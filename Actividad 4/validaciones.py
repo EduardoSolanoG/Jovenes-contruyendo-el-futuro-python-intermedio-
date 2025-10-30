@@ -53,10 +53,10 @@ def validar_datos(nombre, edad, correo):
         validar_correo(correo)
         print(f"Datos registrados correctamente: {nombre}, {edad} años, {correo}")
 
-    except ValueError as ve:
-        print(f"Error de valor: {ve}")
-    except TypeError as te:
-        print(f"Error de tipo: {te}")
+    except ValueError as e:
+        print(f"Error de valor: {e}")
+    except TypeError as e:
+        print(f"Error de tipo: {e}")
     except Exception as e:
         print(f"Error inesperado: {e}")
     finally:
