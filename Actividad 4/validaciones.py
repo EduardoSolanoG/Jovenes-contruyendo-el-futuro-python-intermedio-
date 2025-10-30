@@ -51,16 +51,16 @@ def validar_datos(nombre, edad, correo):
         validar_nombre(nombre)
         validar_edad(edad)
         validar_correo(correo)
-        print(f"✅ Datos registrados correctamente: {nombre}, {edad} años, {correo}")
+        print(f"Datos registrados correctamente: {nombre}, {edad} años, {correo}")
 
     except ValueError as ve:
-        print(f"❌ Error de valor: {ve}")
+        print(f"Error de valor: {ve}")
     except TypeError as te:
-        print(f"❌ Error de tipo: {te}")
+        print(f"Error de tipo: {te}")
     except Exception as e:
-        print(f"❌ Error inesperado: {e}")
+        print(f"Error inesperado: {e}")
     finally:
-        print("➡ Finalizando proceso de validacion...\n")
+        print("Finalizando proceso de validacion...\n")
 
 
 def probar_validaciones():
@@ -72,18 +72,18 @@ def probar_validaciones():
     validar_datos("Luis", 30, "luis@unam.mx")
 
     # Casos inválidos
-    validar_datos("", 20, "correo@example.com")  # Nombre vacío
-    validar_datos("Pedro", -5, "pedro@example.com")  # Edad negativa
-    validar_datos("Marta", 22, "martaexample.com")  # Falta arroba
-    validar_datos("Carlos", 28, "carlos@example.xyz")  # Dominio no permitido
-    validar_datos("Sofía", "veinte", "sofia@tec.edu")  # Edad tipo incorrecto
+    validar_datos("", 20, "correo@example.com")
+    validar_datos("Pedro", -5, "pedro@example.com")
+    validar_datos("Marta", 22, "martaexample.com")
+    validar_datos("Carlos", 28, "carlos@example.xyz")
+    validar_datos("Sofía", "veinte", "sofia@tec.edu")
 
     # Ejemplo con error inesperado
     try:
         logging.debug("Probando division de edades...")
         resultado = 10 / 0  # Provoca ZeroDivisionError
     except ZeroDivisionError as zde:
-        print(f"❌ Error de división: {zde}")
+        print(f"Error de división: {zde}")
 
     print("=== Pruebas finalizadas ===")
 
@@ -93,4 +93,4 @@ def probar_validaciones():
 
 if __name__ == "__main__":
     probar_validaciones()
-    print("\n🎉 ¡Felicidades! Has concluido con éxito el ejercicio de validación de datos.")
+    print("\n¡Felicidades! Has concluido con éxito el ejercicio de validación de datos.")
