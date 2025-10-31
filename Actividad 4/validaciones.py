@@ -71,11 +71,11 @@ def probar_validaciones():
     validar_datos("Luis", 30, "luis@unam.mx")
 
     # Casos inválidos
-    validar_datos("", 20, "correo@example.com")  # Nombre vacío
-    validar_datos("Pedro", -5, "pedro@example.com")  # Edad negativa
-    validar_datos("Marta", "veinte", "martaexample.com")  # Edad incorrecta y sin '@'
-    validar_datos("Carlos", 28, "carlos@example.xyz")  # Dominio no permitido
-    validar_datos("Sofía", 22, "")  # Correo vacío
+    validar_datos("", 20, "correo@example.com")
+    validar_datos("Pedro", -5, "pedro@example.com")
+    validar_datos("Marta", "veinte", "martaexample.com")
+    validar_datos("Carlos", 28, "carlos@example.xyz")
+    validar_datos("Sofía", 22, "")
 
     # Ejemplo con error inesperado
     try:
@@ -110,6 +110,6 @@ def registro_manual():
 
 
 if __name__ == "__main__":
-    probar_validaciones()  # Pruebas automáticas
-    registro_manual()  # Registro interactivo
+    probar_validaciones()
+    registro_manual()
     print("¡Felicidades! Has concluido con éxito el ejercicio de validación de datos.")
