@@ -97,8 +97,8 @@ def registro_manual():
 
         validar_datos(nombre, edad, correo)
 
-    except ValueError as ve:
-        print(f"Error en los datos ingresados: {ve}")
+    except ValueError as e:
+        print(f"Error en los datos ingresados: {e}")
     except Exception as e:
         print(f"Error inesperado: {e}")
     finally:
